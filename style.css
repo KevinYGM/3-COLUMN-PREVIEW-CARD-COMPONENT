@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/*font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;*/
+
+:root{
+--BrightOrange: hsl(31, 77%, 52%);
+--DarkCyan: hsl(184, 100%, 22%);
+--VeryDarkCyan: hsl(179, 100%, 13%);
+--TransparentWhite: hsla(0, 0%, 100%, 0.068);
+--VerylightGray: hsl(0, 0%, 95%);
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body{
+    background-color: var(--TransparentWhite);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*-----------------PRINCIPAL-CONTAINER---------------*/
+
+.principal-container{
+    /*margin: 9rem 2.5rem;*/
+    border-radius: 0.7rem;
+    height: 132.4rem;
+    min-width: 32.8rem;
+    max-width: 61.0rem;
+    overflow: hidden;
+}
+
+/*-----------------CONTENEDORES HIJOS---------------*/
+
+.sedans{
+    background-color: var(--BrightOrange);
+    width: 100%;
+    padding: 4.7rem;
+}
+
+.suvs{
+    background-color: var(--DarkCyan);
+    width: 100%;
+    padding: 4.7rem;
+}
+
+.luxury{
+    background-color: var(--VeryDarkCyan);
+    width: 100%;
+    padding: 4.7rem;
+}
+
+h1{
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700; 
+    color: var(--VerylightGray);
+    font-size: 4.5rem;
+    margin-bottom: 3rem;
+    animation: leftright 1000ms;
+}
+
+p{
+    
+    font-weight: 400;
+    color: var(--VerylightGray);
+    line-height: 1.8rem;
+    font-size: 1.4rem;
+    margin-bottom: 2.9rem;
+    animation: rightleft 1000ms;
+}
+
+.images-container{
+    margin-bottom: 3rem;
+    animation: updown 1000ms;
+}
+
+button{
+    height: 4.8rem;
+    width: 14.5rem;
+    background-color: var(--VerylightGray);
+    border-radius: 2.5rem;
+    border-style: none;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    animation:downup 1000ms;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: var(--TransparentWhite);
+    color: var(--VerylightGray);
+    border: 2px solid var(--VerylightGray);
+}
+
+.btn-sedans{
+    color: var(--BrightOrange);
+}
+
+.btn-suvs{
+    color: var(--VeryDarkCyan);
+}
+
+.btn-luxury{
+    color: var(--DarkCyan);
+}
+
+
+
+/*-----------------FOOTER---------------------------*/
+.attribution { 
+    font-size: 1.1rem; text-align: center; 
+    margin-bottom: 2rem;
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/*------------------WIDTH: 1000px--------------------*/
+
+@media (min-width:1000px){
+
+    .principal-container{
+        display:flex;
+        height: 50rem;
+        min-width: 92rem;
+     }
+
+     .sedans{
+        width: 33.3%;
+       }
+
+    .suvs{
+        width: 33.3%;
+    }
+
+    .luxury{
+        width: 33.3%;  
+    }
+
+}
+
+/*-------------------------------------ANIMATIONS------------------------*/
+
+
+@keyframes updown{
+    0%{transform: translateY(-500px);}
+    100%{transform: translateY(0px);}
+}
+
+@keyframes downup{
+    0%{transform: translateY(500px);}
+    100%{transform: translateY(0px);}
+}
+
+@keyframes leftright{
+    0%{transform: translateX(-500px);}
+    100%{transform: translateX(0px);}
+}
+
+@keyframes rightleft{
+    0%{transform: translateX(500px);}
+    100%{transform: translateX(0px);}
+}
